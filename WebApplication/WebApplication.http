@@ -1,0 +1,13 @@
+@WebApplication_HostAddress = http://localhost:5187
+
+POST {{WebApplication_HostAddress}}/api/sql
+Accept: application/json
+
+{
+    "sql": "select * from users where iduser = @iduser",
+    "args": {
+        "iduser": 2
+    }
+}
+
+###
